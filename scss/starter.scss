@@ -6,7 +6,7 @@
 //
 // Overriding the default variable values is the best way to customize your
 // CSS without writing _new_ styles. For example, change you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
 
@@ -25,19 +25,33 @@
 // Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
 
 // Toggle global options
-$enable-gradients: true;
-$enable-shadows: true;
+$enable-gradients: false;
+$enable-shadows: false;
 
 // Customize some defaults
 // $body-color: #333;
 // $body-bg: #fff;
-// $border-radius: .4rem;
+$border-radius: 6px;
 // $success: #7952b3;
+
+$input-btn-focus-width: 0;
 
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
 
-$theme-colors: ();
+$primary: #e4b119;
+$primary-1: #db8f1d;
+$primary-2: #cfcbb1;
+$primary-3: #f6f5ef;
+$secondary: #272771;
+
+$theme-colors: (
+  "primary": #e4b119,
+  "primary-1": #db8f1d,
+  "primary-2": #cfcbb1,
+  "primary-3": #f6f5ef,
+  "secondary": #272771,
+);
 
 @import "bootstrap/scss/mixins"; // Required
 
@@ -48,8 +62,8 @@ $theme-colors: ();
 // @import "bootstrap/scss/code";
 // @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
-// @import "bootstrap/scss/buttons";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
 // @import "bootstrap/scss/transitions";
 // @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
